@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/*Route::get('/hello',function()
+{
+echo "hello world";
+});*/
+
+Route::get('/hello/{name}',function($name)
+{
+    echo "hello Mr.".$name;
+    echo "<br>Good afternoon T2";
+});
+
+Route::get('/polikk/1',function()
+{
+echo "polikk thankal!";
+});
+Route::get('/hello','helloController@index');
