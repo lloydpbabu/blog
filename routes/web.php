@@ -19,3 +19,9 @@ Route::get('/calc', function () {
 });
 
 Route::post('/calc','helloController@add');
+
+Route::get('/multi', function () {
+    return view('multi');
+});
+
+Route::post('/multi','multiController@mult');
