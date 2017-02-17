@@ -14,19 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/calc', function () {
+    return view('calc');
+});
 /*Route::get('/hello',function()
 {
 echo "hello world";
 });*/
 
-Route::get('/hello/{name}',function($name)
-{
-    echo "hello Mr.".$name;
-    echo "<br>Good afternoon T2";
-});
+Route::get('/hello/{name}','helloController@index');
 
 Route::get('/polikk/1',function()
 {
 echo "polikk thankal!";
 });
-Route::get('/hello','helloController@index');
+Route::get('/hello/{name1}/{name}','helloController@index2');
