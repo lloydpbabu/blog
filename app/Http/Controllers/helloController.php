@@ -15,4 +15,9 @@ class helloController extends Controller
     {
         echo "Good job".$name1." and ".$name2."!";
     }
+    public function add(Request $request)
+    {
+$sum= $request->number1+$request->number2;
+return view('ans',['result'=>$sum]);
+    }
 }

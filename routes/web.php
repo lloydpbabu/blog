@@ -17,15 +17,5 @@ Route::get('/', function () {
 Route::get('/calc', function () {
     return view('calc');
 });
-/*Route::get('/hello',function()
-{
-echo "hello world";
-});*/
 
-Route::get('/hello/{name}','helloController@index');
-
-Route::get('/polikk/1',function()
-{
-echo "polikk thankal!";
-});
-Route::get('/hello/{name1}/{name}','helloController@index2');
+Route::post('/calc','helloController@add');
